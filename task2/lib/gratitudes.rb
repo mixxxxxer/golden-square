@@ -11,6 +11,6 @@ class Gratitudes
 
   def format
     formatted = "Be grateful for: "
-    formatted += @gratitudes.join(", ")
+    formatted << @gratitudes.join(", ")
   end
 end
