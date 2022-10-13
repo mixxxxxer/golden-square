@@ -39,9 +39,7 @@ class DiaryEntry
     # what has already been read, until the contents is fully read.
     # The next call after that it should restart from the beginning.
     words_count = (minutes.to_f * wpm.to_f).ceil
-    p "in start s = #{@start} wc = #{words_count}"
     result = @contents.split.slice(@start, words_count).join(' ')
-    p "in end s = #{@start} f = #{words_count}"
     @start += words_count
     @start = 0 if @start >= contents.split.size
     return result
